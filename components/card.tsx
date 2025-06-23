@@ -84,7 +84,7 @@ export function Card({
       onPointerCancel={() => setIsActive(false)}
       onDragStart={() => setIsActive(true)}
       onDragEnd={handleDragEnd}
-      className="w-[250px] h-[250px] md:w-[430px] md:h-[430px] absolute right-50 lg:right-30 hover:cursor-grab active:cursor-grabbing"
+      className="w-[250px] h-[250px] md:w-[430px] md:h-[430px] absolute left-1/2 -translate-x-1/2 hover:cursor-grab active:cursor-grabbing"
       style={{
         backgroundColor: bgColor,
         x,
