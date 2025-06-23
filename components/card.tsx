@@ -44,7 +44,7 @@ export function Card({
 
   useEffect(() => {
     if (direction === "shuffle" && index >= activeCard) {
-      animate(x, 1000, {
+      animate(x, window.innerWidth + 500, {
         type: "spring",
         stiffness: 400,
         damping: 30,
@@ -52,7 +52,7 @@ export function Card({
       });
     }
     if (index === activeCard - 1 && direction === "next") {
-      animate(x, 1000, {
+      animate(x, window.innerWidth + 500, {
         type: "spring",
         stiffness: 400,
         damping: 30,
