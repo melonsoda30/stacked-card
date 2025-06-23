@@ -69,6 +69,7 @@ export default function Home() {
           direction={direction}
           setActiveCard={setActiveCard}
           setDirection={setDirection}
+          cardLength={colors.length}
         />
       ))}
 

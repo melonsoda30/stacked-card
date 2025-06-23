@@ -12,6 +12,7 @@ interface CardProps {
   resetCount: number;
   index: number;
   activeCard: number;
+  cardLength: number;
   direction: Direction;
   setActiveCard: React.Dispatch<React.SetStateAction<number>>;
   setDirection: React.Dispatch<React.SetStateAction<Direction>>;
@@ -27,6 +28,7 @@ export function Card({
   direction,
   setActiveCard,
   setDirection,
+  cardLength,
 }: CardProps) {
   const [isActive, setIsActive] = useState(false);
   const x = useMotionValue(0);
@@ -74,7 +76,7 @@ export function Card({
         type: "spring",
         stiffness: 400,
         damping: 30,
-        delay: index * 0.1,
+        delay: (cardLength - index) * 0.1,
       });
     }
   }, [resetCount, x, index]);
